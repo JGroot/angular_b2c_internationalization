@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="plaintext" original="ng2.template" source-language="en-US" target-language="fr-FR">
+    <body>
+      <trans-unit id="7504892957364577407" datatype="html">
+        <source>Web API</source>
+        <target>API Web</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2984628903434675339" datatype="html">
+        <source>Edit Profile</source>
+        <target>Editer le profil</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2454050363478003966" datatype="html">
+        <source>Login</source>
+        <target>S'identifier</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3797778920049399855" datatype="html">
+        <source>Logout</source>
+        <target>Connectez - Out</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6499981236058228396" datatype="html">
+        <source>Login failed. Please try again.</source>
+        <target>Echec de la connexion. Veuillez réessayer.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/failed/failed.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="734934965373819800" datatype="html">
+        <source>Go back</source>
+        <target>Retourner</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/failed/failed.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2739753320319842568" datatype="html">
+        <source>Welcome to the MSAL.js v2 Angular Quickstart!</source>
+        <target>Bienvenue dans le Quickstart MSAL.js v2 Angular !</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6793946895821247609" datatype="html">
+        <source>This sample demonstrates how to configure MSAL Angular to login, logout, protect a route, and acquire an access token for a protected resource such as a B2C protected web API.</source>
+        <target>Cet exemple montre comment configurer MSAL Angular pour se connecter, se déconnecter, protéger une route et acquérir un jeton d'accès pour une ressource protégée telle qu'une API Web protégée B2C.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4737237387205741236" datatype="html">
+        <source>Please sign-in to acquire a token and make an API call.</source>
+        <target>Veuillez vous connecter pour acquérir un jeton et effectuer un appel API.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3508541489041936067" datatype="html">
+        <source>Login successful!</source>
+        <target>Connexion réussie!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1598506049801140621" datatype="html">
+        <source>Request your profile information by clicking Web API above.</source>
+        <target>Demandez vos informations de profil en cliquant sur API Web ci-dessus.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4915431133669985304" datatype="html">
+        <source>Profile</source>
+        <target>Profil</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/profile/profile.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
