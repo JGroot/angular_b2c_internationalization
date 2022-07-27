@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, LOCALE_ID, Inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { MsalBroadcastService, MsalService } from '@azure/msal-angular';
 import { AuthenticationResult, EventMessage, EventType, InteractionStatus } from '@azure/msal-browser';
 import { CookieService } from 'ngx-cookie-service';
@@ -12,9 +13,12 @@ import { filter } from 'rxjs/operators';
 export class HomeComponent implements OnInit {
   loginDisplay = false;
   culture_code: string;
-  constructor(private authService: MsalService, 
+  constructor(
+    @Inject(LOCALE_ID) public localeId: string,
+    private authService: MsalService, 
     private msalBroadcastService: MsalBroadcastService,
-    private cookieService: CookieService) { }
+    private cookieService: CookieService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.msalBroadcastService.msalSubject$
@@ -48,9 +52,11 @@ export class HomeComponent implements OnInit {
     //set cookie
     console.log("culture_code: " + this.culture_code);
     this.cookieService.set('culture_code', this.culture_code);
-    //if (this.culture_code === 'en'){
-
-    //}
+    if (this.culture_code === 'en'){
+      console.log('localId == ' + this.localeId);
+        this.localeId = 'en-US';
+      console.log('updated localeId to ' + this.localeId);
+    }
 
   }
 
