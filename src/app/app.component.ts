@@ -4,6 +4,7 @@ import { EventMessage, EventType, InteractionType, InteractionStatus, PopupReque
 import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
 import { b2cPolicies } from './b2c-config';
+import { CookieService } from 'ngx-cookie-service';
 
 interface Payload extends AuthenticationResult {
   idTokenClaims: {
@@ -16,22 +17,24 @@ interface Payload extends AuthenticationResult {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent implements OnInit, OnDestroy {
   title = 'MSAL Angular v2 B2C Sample';
   isIframe = false;
   loginDisplay = false;
   private readonly _destroying$ = new Subject<void>();
+  selectedCulture: string; 
 
   constructor(
     @Inject(MSAL_GUARD_CONFIG) private msalGuardConfig: MsalGuardConfiguration,
     private authService: MsalService,
-    private msalBroadcastService: MsalBroadcastService
+    private msalBroadcastService: MsalBroadcastService,
+    private cookieService: CookieService,
   ) {}
 
   ngOnInit(): void {
     this.isIframe = window !== window.parent && !window.opener;
     this.setLoginDisplay();
-    
     this.msalBroadcastService.inProgress$
     .pipe(
       filter((status: InteractionStatus) => status === InteractionStatus.None),
@@ -77,6 +80,7 @@ export class AppComponent implements OnInit, OnDestroy {
   setLoginDisplay() {
     this.loginDisplay = this.authService.instance.getAllAccounts().length > 0;
   }
+
 
   checkAndSetActiveAccount(){
     /**
@@ -136,5 +140,18 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this._destroying$.next(undefined);
     this._destroying$.complete();
+  }
+
+  onCultureChanged(selectedCulture: string){
+    this.selectedCulture = selectedCulture;
+    
+    console.log("setting cookie onCultureChanged: " + selectedCulture);
+    this.cookieService.set('culture_code', selectedCulture, null, '/');
+
+    const url = new URL(document.location.origin);
+    url.searchParams.set('locale', selectedCulture);
+    console.log("Changing Culture to: " + selectedCulture);
+    console.log("Navigating to: "+ url.toString());
+    document.location.href = url.toString();
   }
 }

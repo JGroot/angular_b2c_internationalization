@@ -1,7 +1,15 @@
 <mat-toolbar color="primary">
-  <a class="title" href="/">{{ title }}</a>
 
+
+  <a class="title" href="/">{{ title }}</a>
   <div class="toolbar-spacer"></div>
+
+
+  <select *ngIf="loginDisplay" (change)="onCultureChanged($event.target.value)" 
+      [(ngModel)]="selectedCulture" class="custom-select">
+    <option value="en">English</option>
+    <option value="fr">French</option>
+  </select>
 
   <a i18n mat-button [routerLink]="['profile']">Web API</a>
   <button i18n mat-button *ngIf="loginDisplay" (click)="editProfile()">Edit Profile</button>

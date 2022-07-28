@@ -12,7 +12,6 @@ import { filter } from 'rxjs/operators';
 })
 export class HomeComponent implements OnInit {
   loginDisplay = false;
-  culture_code: string;
   constructor(
     @Inject(LOCALE_ID) public localeId: string,
     private authService: MsalService, 
@@ -31,7 +30,8 @@ export class HomeComponent implements OnInit {
 
         const payload = result.payload as AuthenticationResult;
         this.authService.instance.setActiveAccount(payload.account);  
-        this.setCulture();
+        let culture_code = String(this.authService.instance.getActiveAccount()?.idTokenClaims?.culture_code);
+        this.setCulture(culture_code);
       });
 
     this.msalBroadcastService.inProgress$
@@ -47,16 +47,25 @@ export class HomeComponent implements OnInit {
     this.loginDisplay = this.authService.instance.getAllAccounts().length > 0;
   }
 
-  setCulture(){
-    this.culture_code = String(this.authService.instance.getActiveAccount()?.idTokenClaims?.culture_code);
+  setCulture(culture_code : string){
     //set cookie
-    console.log("culture_code: " + this.culture_code);
-    this.cookieService.set('culture_code', this.culture_code);
-    if (this.culture_code === 'en'){
-      console.log('localId == ' + this.localeId);
+    console.log("culture_code: " + culture_code);
+    this.cookieService.set('culture_code', culture_code);
+    if (culture_code === 'en'){
         this.localeId = 'en-US';
-      console.log('updated localeId to ' + this.localeId);
+        
+        const url = new URL(document.location.origin);
+        url.searchParams.set('locale', 'en');
+        document.location.href = url.toString();
     }
+
+    if (culture_code === 'fr'){
+      this.localeId = 'fr-FR';
+
+      const url = new URL(document.location.origin);
+      url.searchParams.set('locale', 'fr');
+      document.location.href = url.toString();
+  }
 
   }
 
