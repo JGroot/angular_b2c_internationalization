@@ -19,7 +19,7 @@ interface Payload extends AuthenticationResult {
 })
 
 export class AppComponent implements OnInit, OnDestroy {
-  title = 'MSAL Angular v2 B2C Sample';
+  title = 'MSAL Angular B2C & Internationalization';
   isIframe = false;
   loginDisplay = false;
   private readonly _destroying$ = new Subject<void>();
