@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, LOCALE_ID } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr'; //changing this to @angular/common/locales/global/fr breaks it
 registerLocaleData(localeFr);
@@ -34,7 +35,7 @@ export function MSALInstanceFactory(): IPublicClientApplication {
     auth: {
       clientId: 'd512c189-18e4-45c5-90e6-bf172f7958c7',
       authority: b2cPolicies.authorities.signUpSignIn.authority,
-      redirectUri: 'http://localhost:3000/en-US',
+      redirectUri: 'http://localhost:3000',
       postLogoutRedirectUri: '/',
       knownAuthorities: [b2cPolicies.authorityDomain]
     },
@@ -83,6 +84,7 @@ export function MSALGuardConfigFactory(): MsalGuardConfiguration {
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    FormsModule,  
     MatButtonModule,
     MatToolbarModule,
     MatListModule,
@@ -112,7 +114,7 @@ export function MSALGuardConfigFactory(): MsalGuardConfiguration {
     MsalBroadcastService,
     CookieService,
     {
-      provide: LOCALE_ID, useValue: 'fr'
+      provide: LOCALE_ID, useValue: 'en'
     }
   ],
   bootstrap: [AppComponent, MsalRedirectComponent]

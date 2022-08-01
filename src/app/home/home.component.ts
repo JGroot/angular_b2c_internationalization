@@ -12,10 +12,9 @@ import { filter } from 'rxjs/operators';
 })
 export class HomeComponent implements OnInit {
   loginDisplay = false;
-  culture_code: string;
   constructor(
     @Inject(LOCALE_ID) public localeId: string,
-    private authService: MsalService, 
+    private authService: MsalService,
     private msalBroadcastService: MsalBroadcastService,
     private cookieService: CookieService,
     private router: Router) { }
@@ -30,10 +29,11 @@ export class HomeComponent implements OnInit {
         console.log(result);
 
         const payload = result.payload as AuthenticationResult;
-        this.authService.instance.setActiveAccount(payload.account);  
-        this.setCulture();
+        this.authService.instance.setActiveAccount(payload.account);
+        let culture_code = String(this.authService.instance.getActiveAccount()?.idTokenClaims?.culture_code);
+        this.setCulture(culture_code);
       });
-
+    
     this.msalBroadcastService.inProgress$
       .pipe(
         filter((status: InteractionStatus) => status === InteractionStatus.None)
@@ -47,16 +47,19 @@ export class HomeComponent implements OnInit {
     this.loginDisplay = this.authService.instance.getAllAccounts().length > 0;
   }
 
-  setCulture(){
-    this.culture_code = String(this.authService.instance.getActiveAccount()?.idTokenClaims?.culture_code);
+  setCulture(culture_code: string) {
     //set cookie
-    console.log("culture_code: " + this.culture_code);
-    this.cookieService.set('culture_code', this.culture_code);
-    if (this.culture_code === 'en'){
-      console.log('localId == ' + this.localeId);
-        this.localeId = 'en-US';
-      console.log('updated localeId to ' + this.localeId);
+    console.log("culture_code: " + culture_code);
+    this.cookieService.set('culture_code', culture_code, null, '/');
+    const url = new URL(document.location.origin);
+
+    if (culture_code === 'en') {
+      url.searchParams.set('locale', 'en');
     }
+    if (culture_code === 'fr') {
+      url.searchParams.set('locale', 'fr');
+    }
+    document.location.href = url.toString();
 
   }
 
