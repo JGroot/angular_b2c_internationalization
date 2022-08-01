@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
         let culture_code = String(this.authService.instance.getActiveAccount()?.idTokenClaims?.culture_code);
         this.setCulture(culture_code);
       });
-
+    
     this.msalBroadcastService.inProgress$
       .pipe(
         filter((status: InteractionStatus) => status === InteractionStatus.None)
