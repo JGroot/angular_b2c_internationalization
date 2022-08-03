@@ -2,32 +2,32 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="7504892957364577407" datatype="html">
-        <source>Web API</source>
+      <trans-unit id="6473189833381530178" datatype="html">
+        <source>Sample Page</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2984628903434675339" datatype="html">
         <source>Edit Profile</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">7</context>
+          <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2454050363478003966" datatype="html">
         <source>Login</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">8</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3797778920049399855" datatype="html">
         <source>Logout</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">9</context>
+          <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6499981236058228396" datatype="html">
@@ -86,12 +86,45 @@
           <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="2864100118156505705" datatype="html">
-        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Name: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> <x id="INTERPOLATION" equiv-text="{{profile.name}}"/></source>
+      <trans-unit id="756230241373707305" datatype="html">
+        <source> Jaguar shark! So tell me - does it really exist? Life finds a way. Yes, Yes, without the oops! My dad once told me, laugh and the world laughs with you, Cry, and I&apos;ll give you something to cry about you little bastard! Jaguar shark! So tell me - does it really exist? </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/profile/profile.component.html</context>
-          <context context-type="linenumber">3</context>
+          <context context-type="sourcefile">src/app/samplepage/samplepage.component.html</context>
+          <context context-type="linenumber">2,8</context>
         </context-group>
+        <note priority="1" from="description">SamplePage Text 1</note>
+      </trans-unit>
+      <trans-unit id="8720362613489118837" datatype="html">
+        <source> Hey, take a look at the earthlings. Goodbye! Checkmate... Must go faster... go, go, go, go, go! We gotta burn the rain forest, dump toxic waste, pollute the air, and rip up the OZONE! &apos;Cause maybe if we screw up this planet enough, they won&apos;t want it anymore! </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/samplepage/samplepage.component.html</context>
+          <context context-type="linenumber">9,14</context>
+        </context-group>
+        <note priority="1" from="description">SamplePage Text 2</note>
+      </trans-unit>
+      <trans-unit id="7821737470048254535" datatype="html">
+        <source> I was part of something special. Just my luck, no ice. Eventually, you do plan to have dinosaurs on your dinosaur tour, right? Checkmate... Checkmate... What do they got in there? King Kong? God help us, we&apos;re in the hands of engineers. Yes, Yes, without the oops! </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/samplepage/samplepage.component.html</context>
+          <context context-type="linenumber">15,20</context>
+        </context-group>
+        <note priority="1" from="description">SamplePage Text 3</note>
+      </trans-unit>
+      <trans-unit id="3520788655692530423" datatype="html">
+        <source> So you two dig up, dig up dinosaurs? So you two dig up, dig up dinosaurs? Jaguar shark! So tell me - does it really exist? Yeah, but your scientists were so preoccupied with whether or not they could, they didn&apos;t stop to think if they should. Yeah, but your scientists were so preoccupied with whether or not they could, they didn&apos;t stop to think if they should. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/samplepage/samplepage.component.html</context>
+          <context context-type="linenumber">21,29</context>
+        </context-group>
+        <note priority="1" from="description">SamplePage Text 4</note>
+      </trans-unit>
+      <trans-unit id="7102454019156636353" datatype="html">
+        <source> You really think you can fly that thing? Eventually, you do plan to have dinosaurs on your dinosaur tour, right? Must go faster. You&apos;re a very talented young man, with your own clever thoughts and ideas. Do you need a manager? They&apos;re using our own satellites against us. And the clock is ticking. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/samplepage/samplepage.component.html</context>
+          <context context-type="linenumber">30,35</context>
+        </context-group>
+        <note priority="1" from="description">SamplePage Text 5</note>
       </trans-unit>
     </body>
   </file>

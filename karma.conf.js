@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/msal-angular-tutorial'),
+      dir: require('path').join(__dirname, './coverage/b2c-msal-angular-internationalization'),
       subdir: '.',
       reporters: [
         { type: 'html' },

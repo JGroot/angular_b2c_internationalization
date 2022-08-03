@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "msal-angular-tutorial": {
+    "b2c-msal-angular-internationalization": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -24,7 +24,7 @@
             "localize": [
                "fr-FR" 
             ],
-            "outputPath": "dist/msal-angular-tutorial",
+            "outputPath": "dist/b2c-msal-angular-internationalization",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -77,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "msal-angular-tutorial:build:production"
+              "browserTarget": "b2c-msal-angular-internationalization:build:production"
             },
             "development": {
-              "browserTarget": "msal-angular-tutorial:build:development"
+              "browserTarget": "b2c-msal-angular-internationalization:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "msal-angular-tutorial:build"
+            "browserTarget": "b2c-msal-angular-internationalization:build"
           }
         },
         "test": {
@@ -112,5 +112,5 @@
       }
     }
   },
-  "defaultProject": "msal-angular-tutorial"
+  "defaultProject": "b2c-msal-angular-internationalization"
 }

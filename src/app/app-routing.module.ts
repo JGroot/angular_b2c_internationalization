@@ -6,6 +6,7 @@ import { BrowserUtils } from '@azure/msal-browser';
 import { ProfileComponent } from './profile/profile.component';
 import { FailedComponent } from './failed/failed.component';
 import { HomeComponent } from './home/home.component';
+import { SamplepageComponent } from './samplepage/samplepage.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,13 @@ const routes: Routes = [
       MsalGuard,
     ]
   },
+  {
+    path: 'sample',
+    component: SamplepageComponent,
+    canActivate:[
+      MsalGuard,
+    ]
+  }, 
   {
     // Needed for hash routing
     path: 'error',

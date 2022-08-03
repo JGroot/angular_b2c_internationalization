@@ -2,12 +2,12 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file datatype="plaintext" original="ng2.template" source-language="en-US" target-language="fr-FR">
     <body>
-      <trans-unit id="7504892957364577407" datatype="html">
-        <source>Web API</source>
-        <target>API Web</target>
+      <trans-unit id="6473189833381530178" datatype="html">
+        <source>Sample Page</source>
+        <target>Page d'exemple</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2984628903434675339" datatype="html">
@@ -15,7 +15,7 @@
         <target>Editer le profil</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">7</context>
+          <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2454050363478003966" datatype="html">
@@ -23,7 +23,7 @@
         <target>S'identifier</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">8</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3797778920049399855" datatype="html">
@@ -31,7 +31,7 @@
         <target>Connectez - Out</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">9</context>
+          <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6499981236058228396" datatype="html">
@@ -97,6 +97,51 @@
           <context context-type="sourcefile">src/app/profile/profile.component.html</context>
           <context context-type="linenumber">2</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="756230241373707305" datatype="html">
+        <source> Jaguar shark! So tell me - does it really exist? Life finds a way. Yes, Yes, without the oops! My dad once told me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard! Jaguar shark! So tell me - does it really exist? </source>
+        <target> Requin jaguar! Alors dites-moi - existe-t-il vraiment? La vie trouve un moyen. Oui, oui, sans les oups! Mon père m’a dit un jour, rire et le monde rit avec toi, pleure, et je vais te donner quelque chose à pleurer sur toi petit bâtard! Requin jaguar! Alors dites-moi - existe-t-il vraiment?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/samplepage/samplepage.component.html</context>
+          <context context-type="linenumber">2,8</context>
+        </context-group>
+        <note priority="1" from="description">SamplePage Text 1</note>
+      </trans-unit>
+      <trans-unit id="8720362613489118837" datatype="html">
+        <source> Hey, take a look at the earthlings. Goodbye! Checkmate... Must go faster... go, go, go, go, go! We gotta burn the rain forest, dump toxic waste, pollute the air, and rip up the OZONE! 'Cause maybe if we screw up this planet enough, they won't want it anymore! </source>
+        <target> Hé, jetez un coup d’œil aux terriens. Au revoir! Échec et mat... Doit aller plus vite... allez, allez, allez, allez, allez! Nous devons brûler la forêt tropicale, déverser des déchets toxiques, polluer l’air et déchirer l’OZONE! Parce que peut-être que si nous gâchons assez cette planète, ils n’en voudront plus! </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/samplepage/samplepage.component.html</context>
+          <context context-type="linenumber">9,14</context>
+        </context-group>
+        <note priority="1" from="description">SamplePage Text 2</note>
+      </trans-unit>
+      <trans-unit id="7821737470048254535" datatype="html">
+        <source> I was part of something special. Just my luck, no ice. Eventually, you do plan to have dinosaurs on your dinosaur tour, right? Checkmate... Checkmate... What do they got in there? King Kong? God help us, we're in the hands of engineers. Yes, Yes, without the oops! </source>
+        <target> Je faisais partie de quelque chose de spécial. Juste ma chance, pas de glace. Finalement, vous prévoyez d’avoir des dinosaures lors de votre tournée des dinosaures, n’est-ce pas? Échec et mat... Échec et mat... Qu’est-ce qu’ils ont là-dedans? King Kong ? Que Dieu nous aide, nous sommes entre les mains d’ingénieurs. Oui, oui, sans les oups! </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/samplepage/samplepage.component.html</context>
+          <context context-type="linenumber">15,20</context>
+        </context-group>
+        <note priority="1" from="description">SamplePage Text 3</note>
+      </trans-unit>
+      <trans-unit id="3520788655692530423" datatype="html">
+        <source> So you two dig up, dig up dinosaurs? So you two dig up, dig up dinosaurs? Jaguar shark! So tell me - does it really exist? Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should. Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should. </source>
+        <target> Alors vous deux déterrez, déterrez des dinosaures? Alors vous deux déterrez, déterrez des dinosaures? Requin jaguar! Alors dites-moi - existe-t-il vraiment? Oui, mais vos scientifiques étaient tellement préoccupés par le fait de savoir s’ils le pouvaient ou non qu’ils ne se sont pas arrêtés pour penser s’ils le devaient. Oui, mais vos scientifiques étaient tellement préoccupés par le fait de savoir s’ils le pouvaient ou non qu’ils ne se sont pas arrêtés pour penser s’ils le devaient. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/samplepage/samplepage.component.html</context>
+          <context context-type="linenumber">21,29</context>
+        </context-group>
+        <note priority="1" from="description">SamplePage Text 4</note>
+      </trans-unit>
+      <trans-unit id="7102454019156636353" datatype="html">
+        <source> You really think you can fly that thing? Eventually, you do plan to have dinosaurs on your dinosaur tour, right? Must go faster. You're a very talented young man, with your own clever thoughts and ideas. Do you need a manager? They're using our own satellites against us. And the clock is ticking. </source>
+        <target> Vous pensez vraiment que vous pouvez piloter cette chose? Finalement, vous prévoyez d’avoir des dinosaures lors de votre tournée des dinosaures, n’est-ce pas? Doit aller plus vite. Vous êtes un jeune homme très talentueux, avec vos propres pensées et idées intelligentes. Avez-vous besoin d’un gestionnaire? Ils utilisent nos propres satellites contre nous. Et l’horloge tourne. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/samplepage/samplepage.component.html</context>
+          <context context-type="linenumber">30,35</context>
+        </context-group>
+        <note priority="1" from="description">SamplePage Text 5</note>
       </trans-unit>
     </body>
   </file>

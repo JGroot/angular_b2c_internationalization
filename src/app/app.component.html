@@ -11,7 +11,7 @@
     <option value="fr">French</option>
   </select>
 
-  <a i18n mat-button [routerLink]="['profile']">Web API</a>
+  <a i18n mat-button *ngIf="loginDisplay" [routerLink]="['sample']">Sample Page</a>
   <button i18n mat-button *ngIf="loginDisplay" (click)="editProfile()">Edit Profile</button>
   <button i18n mat-raised-button *ngIf="!loginDisplay" (click)="login()">Login</button>
   <button i18n mat-raised-button *ngIf="loginDisplay" (click)="logout()">Logout</button>

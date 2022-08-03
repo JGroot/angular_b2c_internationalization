@@ -23,6 +23,7 @@ import { MsalGuard, MsalInterceptor, MsalBroadcastService, MsalInterceptorConfig
 import { b2cPolicies, apiConfig } from './b2c-config';
 
 import { CookieService } from 'ngx-cookie-service';
+import { SamplepageComponent } from './samplepage/samplepage.component';
 
 const isIE = window.navigator.userAgent.indexOf("MSIE ") > -1 || window.navigator.userAgent.indexOf("Trident/") > -1;
 
@@ -78,7 +79,8 @@ export function MSALGuardConfigFactory(): MsalGuardConfiguration {
     AppComponent,
     HomeComponent,
     ProfileComponent,
-    FailedComponent
+    FailedComponent,
+    SamplepageComponent
   ],
   imports: [
     BrowserModule,

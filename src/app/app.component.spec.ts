@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'msal-angular-tutorial'`, () => {
+  it(`should have as title 'b2c-msal-angular-internationalization'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('msal-angular-tutorial');
+    expect(app.title).toEqual('b2c-msal-angular-internationalization');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('msal-angular-tutorial app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('b2c-msal-angular-internationalization app is running!');
   });
 });
