@@ -13,14 +13,13 @@ import { MatListModule } from '@angular/material/list';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ProfileComponent } from './profile/profile.component';
 import { FailedComponent } from './failed/failed.component';
 
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { IPublicClientApplication, PublicClientApplication, InteractionType, BrowserCacheLocation, LogLevel } from '@azure/msal-browser';
 import { MsalGuard, MsalInterceptor, MsalBroadcastService, MsalInterceptorConfiguration, MsalModule, MsalService, MSAL_GUARD_CONFIG, MSAL_INSTANCE, MSAL_INTERCEPTOR_CONFIG, MsalGuardConfiguration, MsalRedirectComponent } from '@azure/msal-angular';
 
-import { b2cPolicies, apiConfig } from './b2c-config';
+import { b2cPolicies } from './b2c-config';
 
 import { CookieService } from 'ngx-cookie-service';
 import { SamplepageComponent } from './samplepage/samplepage.component';
@@ -34,10 +33,10 @@ export function loggerCallback(logLevel: LogLevel, message: string) {
 export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
     auth: {
-      clientId: 'd512c189-18e4-45c5-90e6-bf172f7958c7',
+      clientId: b2cPolicies.clientid,
       authority: b2cPolicies.authorities.signUpSignIn.authority,
-      redirectUri: 'http://localhost:3000',
-      postLogoutRedirectUri: '/',
+      redirectUri: b2cPolicies.redirectUri,
+      postLogoutRedirectUri: b2cPolicies.postLogoutRedirectUri,
       knownAuthorities: [b2cPolicies.authorityDomain]
     },
     cache: {
@@ -56,7 +55,6 @@ export function MSALInstanceFactory(): IPublicClientApplication {
 
 export function MSALInterceptorConfigFactory(): MsalInterceptorConfiguration {
   const protectedResourceMap = new Map<string, Array<string>>();
-  protectedResourceMap.set(apiConfig.uri, apiConfig.scopes);
 
   return {
     interactionType: InteractionType.Redirect,
@@ -68,7 +66,7 @@ export function MSALGuardConfigFactory(): MsalGuardConfiguration {
   return {
     interactionType: InteractionType.Redirect,
     authRequest: {
-      scopes: [...apiConfig.scopes],
+      scopes: [],
     },
     loginFailedRoute: 'login-failed'
   };
@@ -78,7 +76,6 @@ export function MSALGuardConfigFactory(): MsalGuardConfiguration {
   declarations: [
     AppComponent,
     HomeComponent,
-    ProfileComponent,
     FailedComponent,
     SamplepageComponent
   ],

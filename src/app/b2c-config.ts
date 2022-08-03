@@ -5,25 +5,19 @@
  */
  export const b2cPolicies = {
     names: {
-        signUpSignIn: "b2c_1a_custom_idp4",
-        editProfile: "B2C_1_pe"
+        signUpSignIn: "b2c_1_susi_reset_v2",
+        editProfile: "b2c_1_edit_profile_v2"
     },
     authorities: {
         signUpSignIn: {
-            authority: "https://reliastaplayground.b2clogin.com/reliastaplayground.onmicrosoft.com/b2c_1a_custom_idp4",
+            authority: "https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/b2c_1_susi_reset_v2",
         },
         editProfile: {
-            authority: "https://reliastaplayground.b2clogin.com/reliastaplayground.onmicrosoft.com/B2C_1_pe"
+            authority: "https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/b2c_1_edit_profile_v2"
         }
     },
-    authorityDomain: "https://reliastaplayground.b2clogin.com"
-}
-
-/**
- * Enter here the coordinates of your web API and scopes for access token request
- * The current application coordinates were pre-registered in a B2C tenant.
- */
-export const apiConfig: { scopes: string[]; uri: string } = {
-    scopes: ['https://ReliasTAPlayground.onmicrosoft.com/RLMS/access_as_user'],
-    uri: 'https://ReliasTAPlayground.onmicrosoft.com/RLMS'
+    authorityDomain: "fabrikamb2c.b2clogin.com",
+    clientid: "d512c189-18e4-45c5-90e6-bf172f7958c7",
+    redirectUri: "http://localhost:3000",
+    postLogoutRedirectUri: "/"
 };

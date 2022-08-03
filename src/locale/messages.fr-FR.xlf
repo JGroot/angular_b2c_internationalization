@@ -50,25 +50,25 @@
           <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="2739753320319842568" datatype="html">
-        <source>Welcome to the MSAL.js v2 Angular Quickstart!</source>
-        <target>Bienvenue dans le Quickstart MSAL.js v2 Angular !</target>
+       <trans-unit id="7447049899538169425" datatype="html">
+        <source>Welcome to the B2C Angular MSAL Internationalization example project!</source>
+        <target>Bienvenue dans l'exemple de projet B2C Angular MSAL Internationalization !</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
           <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6793946895821247609" datatype="html">
-        <source>This sample demonstrates how to configure MSAL Angular to login, logout, protect a route, and acquire an access token for a protected resource such as a B2C protected web API.</source>
-        <target>Cet exemple montre comment configurer MSAL Angular pour se connecter, se déconnecter, protéger une route et acquérir un jeton d'accès pour une ressource protégée telle qu'une API Web protégée B2C.</target>
+      <trans-unit id="7766301629025390294" datatype="html">
+        <source>This sample demonstrates how to configure MSAL Angular to login, logout, protect a route, and quickly change between languages.</source>
+        <target>Cet exemple montre comment configurer MSAL Angular pour se connecter, se déconnecter, protéger une route et changer rapidement de langue.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4737237387205741236" datatype="html">
-        <source>Please sign-in to acquire a token and make an API call.</source>
-        <target>Veuillez vous connecter pour acquérir un jeton et effectuer un appel API.</target>
+       <trans-unit id="5471629447961321635" datatype="html">
+        <source>Please sign-in to acquire a token.</source>
+        <target>Veuillez vous connecter pour acquérir un jeton</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
           <context context-type="linenumber">4</context>
@@ -82,9 +82,9 @@
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1598506049801140621" datatype="html">
-        <source>Request your profile information by clicking Web API above.</source>
-        <target>Demandez vos informations de profil en cliquant sur API Web ci-dessus.</target>
+      <trans-unit id="6579568496638660954" datatype="html">
+        <source>Change the site language by selecting from the dropdown in the header.</source>
+        <target>Modifiez la langue du site en sélectionnant dans la liste déroulante de l'en-tête.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
           <context context-type="linenumber">9</context>

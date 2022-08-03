@@ -3,19 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { MsalGuard } from '@azure/msal-angular';
 import { BrowserUtils } from '@azure/msal-browser';
 
-import { ProfileComponent } from './profile/profile.component';
 import { FailedComponent } from './failed/failed.component';
 import { HomeComponent } from './home/home.component';
 import { SamplepageComponent } from './samplepage/samplepage.component';
 
 const routes: Routes = [
-  {
-    path: 'profile',
-    component: ProfileComponent,
-    canActivate: [
-      MsalGuard,
-    ]
-  },
   {
     path: 'sample',
     component: SamplepageComponent,

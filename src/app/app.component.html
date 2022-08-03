@@ -7,6 +7,7 @@
 
   <select *ngIf="loginDisplay" (change)="onCultureChanged($event.target.value)" 
       [(ngModel)]="selectedCulture" class="custom-select">
+    <option value="">--Select Culture--</option>
     <option value="en">English</option>
     <option value="fr">French</option>
   </select>

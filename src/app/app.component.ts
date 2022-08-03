@@ -23,7 +23,7 @@ export class AppComponent implements OnInit, OnDestroy {
   isIframe = false;
   loginDisplay = false;
   private readonly _destroying$ = new Subject<void>();
-  selectedCulture: string;
+  selectedCulture: string = "";
   routing = {
     "en": 'http://localhost:3000/en-US',
     "fr": 'http://localhost:3000/fr-FR'
@@ -147,6 +147,8 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   onCultureChanged(selectedCulture: string) {
+    if (selectedCulture === "" ) return;
+
     console.log("onCultureChange() Changing Culture to: " + selectedCulture);
     this.selectedCulture = selectedCulture;
 
@@ -172,7 +174,7 @@ export class AppComponent implements OnInit, OnDestroy {
     function getSubPath() {
       var url = window.location.href;
       console.log("GetSubPath full url: " + url);
-      
+
       var domainNameIndex = url.indexOf("//");
       var firstSlashIndex = url.indexOf("/", domainNameIndex + 2);
       console.log("getSubPath firstSlashIndex: " + firstSlashIndex);
