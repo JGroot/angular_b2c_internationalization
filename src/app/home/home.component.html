@@ -1,0 +1,10 @@
+<div *ngIf="!loginDisplay">
+    <p i18n class="welcome">Welcome to the B2C Angular MSAL Internationalization example project!</p>
+    <p i18n>This sample demonstrates how to configure MSAL Angular to login, logout, protect a route, and quickly change between languages.</p>
+    <p i18n>Please sign-in to acquire a token.</p>
+</div>
+
+<div *ngIf="loginDisplay">
+    <p i18n>Login successful!</p>
+    <p i18n>Change the site language by selecting from the dropdown in the header.</p>
+</div>

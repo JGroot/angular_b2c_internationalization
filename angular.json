@@ -3,17 +3,28 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "msal-angular-tutorial": {
+    "b2c-msal-angular-internationalization": {
       "projectType": "application",
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "fr-FR":{
+            "translation": "src/locale/messages.fr-FR.xlf"
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/msal-angular-tutorial",
+            "localize": [
+               "fr-FR" 
+            ],
+            "outputPath": "dist/b2c-msal-angular-internationalization",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,6 +34,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -50,6 +62,7 @@
               "outputHashing": "all"
             },
             "development": {
+              "localize": false,
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
@@ -64,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "msal-angular-tutorial:build:production"
+              "browserTarget": "b2c-msal-angular-internationalization:build:production"
             },
             "development": {
-              "browserTarget": "msal-angular-tutorial:build:development"
+              "browserTarget": "b2c-msal-angular-internationalization:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "msal-angular-tutorial:build"
+            "browserTarget": "b2c-msal-angular-internationalization:build"
           }
         },
         "test": {
@@ -90,6 +103,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -98,5 +112,5 @@
       }
     }
   },
-  "defaultProject": "msal-angular-tutorial"
+  "defaultProject": "b2c-msal-angular-internationalization"
 }
